@@ -1,0 +1,4 @@
+﻿--------------------MEDICAL RESEARCH APPLICATION---------------------------
+TO ADD DISEASE TO THE SYSTEM ENTER--------------1
+TO ADD SYMPTOMS TO THE DISEASE ENTER -----------2
+TO CHECK PATIENT ENTER--------------------------3
