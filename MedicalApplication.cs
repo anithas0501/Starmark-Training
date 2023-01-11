@@ -60,8 +60,8 @@ namespace UIComponent
             try
             {
 
-                Description = Utilities.Prompt("Enter description[size should be less than 30 character]");
-                if (Description.Length > 30)
+                Description = Utilities.Prompt("Enter description[size should be greater than 30 character]");
+                if (Description.Length <30)
                 {
                     throw new Exception("Description length must be less than 30 charactors");
                 }
@@ -95,8 +95,6 @@ namespace UIComponent
 
             string PatientName = Utilities.Prompt("Enter the Patient Name");
             string[] array = new string[SymptomsRecord.Count];
-
-
             foreach (var item in SymptomsRecord)
             {
                 var UnBound = item as Symptom;
@@ -111,11 +109,7 @@ namespace UIComponent
                 
 
             }
-            foreach (var item in splitted)
-            {
-               // var unBound = item as Symptom;
-                Console.WriteLine(item);
-            }
+        
 
             string Symptoms = Utilities.Prompt("Enter the Symptoms");
             Console.WriteLine("THE POSIBBLE DISEASE ARE:");
