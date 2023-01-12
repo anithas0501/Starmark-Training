@@ -92,7 +92,7 @@ namespace UIComponent
         }
         static void CheckPatient()
         {
-
+            ArrayList foundDiseases = new ArrayList();
             string PatientName = Utilities.Prompt("Enter the Patient Name");
             string[] array = new string[SymptomsRecord.Count];
             foreach (var item in SymptomsRecord)
@@ -122,11 +122,15 @@ namespace UIComponent
                         var UnBound = SymptomsRecord[i] as Symptom;
                         if (UnBound.SymptomName.Contains(item.ToString()))
                         {
-                            Console.WriteLine(UnBound.Disesse);
+                            if(!foundDiseases.Contains(disease))
+                                foundDiseases.Add(disease);
+
                         }
                     }
                 }
-
+                foreach(var item in foundDiseases){
+                    Console.WriteLine(item);
+                }
 
             }
 
